@@ -22,7 +22,7 @@
 	</head>
 	<body>
 	
-
+		{{ content | safe }}
 		
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>

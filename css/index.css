@@ -21,6 +21,12 @@
 	box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 @view-transition {
 	navigation: auto;
 }
@@ -29,7 +35,6 @@ html,
 body {
 	padding: 0;
 	margin: 0 auto;
-	width: 60%;
 	font-family: "Source Sans 3", sans-serif;
 	color: var(--text-color);
 	background-color: var(--background-color);
@@ -37,9 +42,11 @@ body {
 }
 html {
 	overflow-y: scroll;
+	box-sizing: border-box;
+
 }
 body {
-	max-width: 40em;
+	max-width: 70%;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -97,8 +104,8 @@ p {
 	font-family: "Source Sans 3", sans-serif;
   	font-weight: 400;
   	color: #00ff22;
-  	font-size: 2em;
-  	font-variant: small-caps;
+  	font-size: 1.2em;
+  	
 }
 
 li {
@@ -109,6 +116,8 @@ a{
 	font-family: "Silkscreen", sans-serif;
   	color: #00ff22;
   	text-decoration: none;
+	font-variant: small-caps;
+	font-size: 1.2em;
 }
 
 a[href] {
@@ -203,9 +212,10 @@ header {
 /* Nav */
 .nav {
 	display: flex;
+	text-align: center;
 	gap: .5em 1em;
 	padding: 0;
-	margin: 0;
+	margin: auto;
 	list-style: none;
 }
 .nav-item {
@@ -249,7 +259,7 @@ header {
 	word-spacing: -0.5px;
 }
 .postlist-link {
-	font-size: 1.1875em; /* 19px /16 */
+	font-size: 1.5em; /* 19px /16 */
 	font-weight: 700;
 	flex-basis: calc(100% - 1.5rem);
 	padding-left: .25em;
@@ -353,6 +363,13 @@ header {
 
 .title {
   color: grey;
+}
+
+@media screen and (max-width: 850px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
 }
 
 
