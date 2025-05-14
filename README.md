@@ -33,7 +33,7 @@ npm install
 
 ## Editing Files in Your Project
 
-Your text files will be in the "content" folder, your assets like images and documents will be in the "public" folder, and your styling will be in the "css" folder. Some file extensions you will want to know are: 
+>Your text files will be in the "content" folder, your assets like images and documents will be in the "public" folder, and your styling will be in the "css" folder. Some file extensions you will want to know are: 
 - .html (Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser)
 - .css (Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML)
 - .js (JavaScript (JS) is the programming language for creating interactive, dynamic websites)
@@ -44,119 +44,66 @@ Your text files will be in the "content" folder, your assets like images and doc
 - .ico (short for icon, this file format is for square icons like the favicon in your browser tab, can be based on a transparent .png (Portable Network Graphics))
 
 1. Navigate in the Explorer to content/index.njk and double-click to edit the file in the Editor
-2. Edit line 16 between the opening and closing `<h1>` tags to your preferred heading
-3. You can delete the SVG on lines 17-28
+2. Edit line 16 between the opening and closing `<h1>` tags (primary header) to your preferred heading
+3. Edit line 32 between the opening and closing `<h2>` tags (secondary header) to your preferred typewriter message
+4. You can delete the SVG on lines 17-28 and paste in your own SVG code, or if you have an image file, you can replace it with `<img src="image.jpg" alt="text description of image" width="300px">`
 
+5. Navigate in the Explorer to content/about.md and double-click to edit the file in the Editor
+6. Edit lines 7 and 8 between the opening and closing `<p>` tags (paragraph) to your preferred text description
+7. Edit lines 16, 17, and 18; 26, 27, and 28; and 36, 37, and 38 with your top 3 research interests and descriptions
+8. You can delete line 6 if you do not want to include an image.
 
+9. Navigate in the Explorer to content/blog.njk and double-click to edit the file in the Editor
+10. Edit line 12 between the opening and closing `<h2>` tags (secondary header) to your preferred blog title
 
-* [Want a more generic/detailed getting started guide?](https://www.11ty.dev/docs/getting-started/)
+11. Navigate in the Explorer to content/blog/firstpost.md and double-click to edit the file in the Editor
+12. On line 2 you can edit the title, line 3 edit the description, line 4 edit the date, and line 5 create any tags
+13. On lines 7 and below, delete and replace with your own text
 
-1. Make a directory and navigate to it:
+### Editing Styles
 
-```
-mkdir my-blog-name
-cd my-blog-name
-```
+14. Navigate in the Explorer to css/index.css and double-click to edit the file in the Editor
 
-2. Clone this Repository
+#### Colors
+>Hexcode is a color system on a scale from 0-9,A-F that designates a color RRGGBB. You can calculate a color using this [HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp) or you can type in a [HTML color](https://www.w3schools.com/colors/colors_names.asp)
 
-```
-git clone https://github.com/11ty/eleventy-base-blog.git .
-```
+15. Edit line 7 to change the background color, 9 to change the text color, 10 to change the link color, 11 to change the link hover color, and 12 to change the visited link color
+16. Edit line 87 to change the text color for h1-h3 headers, line 94 to change the text color for h4-h5 headers, and line 106 for paragraph text color
+17. Edit lines 306 and 330 to change the color of the blinking cursor in the typewriter CSS animation
+18. Edit line 365 for title class color
+19. Edit line 400 for background color of cards on about page
 
-_Optional:_ Review `eleventy.config.js` and `_data/metadata.js` to configure the site’s options and data.
+#### Fonts
+20. Edit line 38 to change the base font for the entire site
+21. Edit line 88 to change the font for h1-h3 headers
+22. Edit line 95 to change the font for h4-h5 headers
+23. Edit line 104 to change the font for paragraph text
+24. Edit line 116 to change the font for links
+25. Edit line 119 to change the [font variant](https://www.w3schools.com/cssref/pr_font_font-variant.php) for links 
+26. Edit line 171 to change the font for preformatted code
 
-3. Install dependencies
+27. To add Google Fonts, go to [https://fonts.google.com/](https://fonts.google.com/), browse/search for fonts, select as many fonts as you want, click the blue "Get font" button, click the blue "<>Get embed code" button, and in the <link> option, copy the code from "Embed code in the <head> of your html"
+28. Navigate in the Explorer to _includes/layouts/base.njk
+29. Paste your <links> on lines 10-12
 
-```
-npm install
-```
+## Run Eleventy to Create Site
 
-4. Run Eleventy
-
-Generate a production-ready build to the `_site` folder:
-
+1. In the Terminal, use the node package manager command npx (Node Package eXecute) to run eleventy, which will convert your markdown and nunjucks files to html files by copying and pasting the code below and then pressing enter/return.
 ```
 npx @11ty/eleventy
 ```
-
-Or build and host on a local development server:
-
+2. You should see new lines of text being generated in the Terminal. You may need to troubleshoot any errors.
+3. If you want to see a local test of your site before you put it on the web, copy and paste the following code in the Terminal
 ```
 npx @11ty/eleventy --serve
 ```
+4. Command/Control + click on the local link to view a preview of your site in a new browser tab
 
-Or you can run [debug mode](https://www.11ty.dev/docs/debugging/) to see all the internals.
 
-## Features
+## Deploy to GitHub Pages
 
-- Using [Eleventy v3](https://github.com/11ty/eleventy/releases/tag/v3.0.0) with zero-JavaScript output.
-	- Content is exclusively pre-rendered (this is a static site).
-	- Can easily [deploy to a subfolder without changing any content](https://www.11ty.dev/docs/plugins/html-base/)
-	- All URLs are decoupled from the content’s location on the file system.
-	- Configure templates via the [Eleventy Data Cascade](https://www.11ty.dev/docs/data-cascade/)
-- **Performance focused**: four-hundos Lighthouse score out of the box!
-	- _0 Cumulative Layout Shift_
-	- _0ms Total Blocking Time_
-- Local development live reload provided by [Eleventy Dev Server](https://www.11ty.dev/docs/dev-server/).
-- Content-driven [navigation menu](https://www.11ty.dev/docs/plugins/navigation/)
-- Fully automated [Image optimization](https://www.11ty.dev/docs/plugins/image/)
-	- Zero-JavaScript output.
-	- Support for modern image formats automatically (e.g. AVIF and WebP)
-	- Processes images on-request during `--serve` for speedy local builds.
-	- Prefers `<img>` markup if possible (single image format) but switches automatically to `<picture>` for multiple image formats.
-	- Automated `<picture>` syntax markup with `srcset` and optional `sizes`
-	- Includes `width`/`height` attributes to avoid [content layout shift](https://web.dev/cls/).
-	- Includes `loading="lazy"` for native lazy loading without JavaScript.
-	- Includes [`decoding="async"`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decoding)
-	- Images can be co-located with blog post files.
-- Per page CSS bundles [via `eleventy-plugin-bundle`](https://github.com/11ty/eleventy-plugin-bundle).
-- Built-in [syntax highlighter](https://www.11ty.dev/docs/plugins/syntaxhighlight/) (zero-JavaScript output).
-- Draft content: use `draft: true` to mark any template as a draft. Drafts are **only** included during `--serve`/`--watch` and are excluded from full builds. This is driven by the `addPreprocessor` configuration API in `eleventy.config.js`. Schema validator will show an error if non-boolean value is set in data cascade.
-- Blog Posts
-	- Automated next/previous links
-	- Accessible deep links to headings
-- Generated Pages
-	- Home, Archive, and About pages.
-	- [Atom feed included (with easy one-line swap to use RSS or JSON](https://www.11ty.dev/docs/plugins/rss/)
-	- `sitemap.xml`
-	- Zero-maintenance tag pages ([View on the Demo](https://eleventy-base-blog.netlify.app/tags/))
-	- Content not found (404) page
+Look in `.github/workflows/gh-pages.yml.sample` for information on [Deploying to **GitHub Pages**](https://www.11ty.dev/docs/deployment/#deploy-an-eleventy-project-to-git-hub-pages).
 
-## Demos
-
-- [Netlify](https://eleventy-base-blog.netlify.app/)
-- [Vercel](https://demo-base-blog.11ty.dev/)
-- [Cloudflare Pages](https://eleventy-base-blog-d2a.pages.dev/)
-- [Remix on Glitch](https://glitch.com/~11ty-eleventy-base-blog)
-- [GitHub Pages](https://11ty.github.io/eleventy-base-blog/)
-
-## Deploy this to your own site
-
-Deploy this Eleventy site in just a few clicks on these services:
-
-- Read more about [Deploying an Eleventy project](https://www.11ty.dev/docs/deployment/) to the web.
-- [Deploy this to **Netlify**](https://app.netlify.com/start/deploy?repository=https://github.com/11ty/eleventy-base-blog)
-- [Deploy this to **Vercel**](https://vercel.com/import/project?template=11ty%2Feleventy-base-blog)
-- Look in `.github/workflows/gh-pages.yml.sample` for information on [Deploying to **GitHub Pages**](https://www.11ty.dev/docs/deployment/#deploy-an-eleventy-project-to-git-hub-pages).
-- [Try it out on **Stackblitz**](https://stackblitz.com/github/11ty/eleventy-base-blog)
 
 ### Implementation Notes
-
-- `content/about/index.md` is an example of a content page.
-- `content/blog/` has the blog posts but really they can live in any directory. They need only the `posts` tag to be included in the blog posts [collection](https://www.11ty.dev/docs/collections/).
-- Use the `eleventyNavigation` key (via the [Eleventy Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/)) in your front matter to add a template to the top level site navigation. This is in use on `content/index.njk` and `content/about/index.md`.
-- Content can be in _any template format_ (blog posts needn’t exclusively be markdown, for example). Configure your project’s supported templates in `eleventy.config.js` -> `templateFormats`.
 - The `public` folder in your input directory will be copied to the output folder (via `addPassthroughCopy` in the `eleventy.config.js` file). This means `./public/css/*` will live at `./_site/css/*` after your build completes.
-- This project uses three [Eleventy Layouts](https://www.11ty.dev/docs/layouts/):
-	- `_includes/layouts/base.njk`: the top level HTML structure
-	- `_includes/layouts/home.njk`: the home page template (wrapped into `base.njk`)
-	- `_includes/layouts/post.njk`: the blog post template (wrapped into `base.njk`)
-- `_includes/postslist.njk` is a Nunjucks include and is a reusable component used to display a list of all the posts. `content/index.njk` has an example of how to use it.
-
-#### Content Security Policy
-
-If your site enforces a [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (as public-facing sites should), you have a few choices (pick one):
-
-1. In `base.njk`, remove `<style>{% getBundle "css" %}</style>` and uncomment `<link rel="stylesheet" href="{% getBundleFileUrl "css" %}">`
-2. Configure the server with the CSP directive `style-src: 'unsafe-inline'` (less secure).
