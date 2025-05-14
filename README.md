@@ -1,8 +1,53 @@
-# eleventy-base-blog v9
+# Dream Lab Blog Template
 
-A starter repository showing how to build a blog with the [Eleventy](https://www.11ty.dev/) site generator (using the [v3.0 release](https://github.com/11ty/eleventy/releases/tag/v3.0.0)).
+This repository (aka. a repo; a central storage for your project's files, folders, and version history) has all the files and instructions to build a basic personal website with an about me page, a link to a CV [PDF], and a simple blog with the [Eleventy](https://www.11ty.dev/) site generator (using the [v3.0 release](https://github.com/11ty/eleventy/releases/tag/v3.0.0)).
+
+This project will teach you how to use multiple functions with GitHub to create a website, including [GitHub Pages](https://pages.github.com/) which hosts your static site for free and [GitHub Codespaces](https://github.com/features/codespaces) which combines an explorer, code editor, and terminal to allow you to make updates to "push" and "pull" from your repository (from your local copy to the remote version). 
+
+I recommend using Google Chrome for this exercise so you can easily use the Developer tools like "View Source" and "Inspect Elements".
 
 ## Getting Started
+
+1. [Create a GitHub account](https://github.com/signup) if you do not already have one. (NOTE: You will want to pick a professional username because it will be in all of your URLs)
+2. Navigate back to [this repository](https://github.com/Makeademic/dream-lab-blog/) and click the green button that says "Use this template" and then "Create a new repository"
+3. Type a name for your new repository (NOTE: lowercase and no spaces is best for URLs with hyphens or underscores separating each word)
+4. Select "Public" repository visibility and you only need to include the "main" branch (We will build the gh-pages branch in a later step)
+5. Click "Create repository from template"
+
+**Review**
+So far, what we have done is created a copy of a public project on our individual accounts so that we can edit and make changes to the files
+
+## Setting Up Your Project in GitHub Codespaces
+
+>Typically coders using GitHub use their favorite text editor like [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom-editor.cc/), or [Visual Studio Code](https://code.visualstudio.com/), and then use a graphical user interface (GUI) like [GitHub Desktop](https://github.com/apps/desktop) or their command-line interface (CLI) like Terminal to push and pull changes to their project. GitHub created Codespaces to allow you to do both of those things right in the browser without having to download software applications (so you can do all of this on your iPad if you want!)
+
+1. On your repository's homepage, click the green "Code" button and switch from the "Local" to the "Codespaces" tab. Then click the green "Create codespace on main" button.
+2. This will open up a new tab in your browser and will take some time, so be patient with it. [NOTE: As of authoring this document, GitHub provides 60 free hours of Codespaces every month]
+3. You should see the Explorer on the left (this helps you see folder hierarchy), the Editor on the right (this is where you can edit the code), and the Terminal at the bottom (this is where we will provide instructions for building our project). The far left toolbar will let you switch between options: Explorer, Search, Source Control, Run and Debug, Extensions, and GitHub.
+4. In the Explorer, navigate to _data/metadata.js and double-click to open the file in the Editor space. Change the title, URL (https://username.github.io/repositoryname), description, and author data.
+5. In the Terminal, install dependencies (the needed files for this version of the project) by copying and pasting the code below and then pressing enter/return.
+```
+npm install
+```
+6. You should see new lines of text being generated in the Terminal.
+
+## Editing Files in Your Project
+
+Your text files will be in the "content" folder, your assets like images and documents will be in the "public" folder, and your styling will be in the "css" folder. Some file extensions you will want to know are: 
+- .html (Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser)
+- .css (Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML)
+- .js (JavaScript (JS) is the programming language for creating interactive, dynamic websites)
+- .md (Markdown is a lightweight markup language for creating formatted text using a plain-text editor)
+- .njk (Nunjucks is a templating language for JavaScript)
+- .svg (Scalable Vector Graphics (SVG) is an XML-based vector graphics format for defining two-dimensional graphics, having support for interactivity and animation)
+- .jpg (jpg or jpeg, short for Joint Photographic Experts Group, is a compressed image format used for photos)
+- .ico (short for icon, this file format is for square icons like the favicon in your browser tab, can be based on a transparent .png (Portable Network Graphics))
+
+1. Navigate in the Explorer to content/index.njk and double-click to edit the file in the Editor
+2. Edit line 16 between the opening and closing `<h1>` tags to your preferred heading
+3. You can delete the SVG on lines 17-28
+
+
 
 * [Want a more generic/detailed getting started guide?](https://www.11ty.dev/docs/getting-started/)
 
