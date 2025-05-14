@@ -3,7 +3,7 @@ layout: layouts/base.njk
 ---
 <div class="about-section">
   <h1>About Me</h1>
-  <img src="/public/biophoto.jpg" alt="photo description of me" style="width:100%">
+  <img src="img/biophoto.jpg" alt="photo description of me" style="width:100%">
   <p>Some text about who I am and what I do.</p>
   <p>Resize the browser window to see that this page is responsive by the way.</p>
 </div>
