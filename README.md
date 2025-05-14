@@ -88,7 +88,7 @@ npm install
 
 ## Run Eleventy to Create Site
 
-1. In the Terminal, use the node package manager command npx (Node Package eXecute) to run eleventy, which will convert your markdown and nunjucks files to html files by copying and pasting the code below and then pressing enter/return.
+1. In the Terminal, use the node package manager command npx (Node Package eXecute) to run eleventy, which will convert your markdown and nunjucks files to html files, by copying and pasting the code below and then pressing enter/return.
 ```
 npx @11ty/eleventy
 ```
