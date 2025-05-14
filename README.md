@@ -33,6 +33,7 @@ npm install
 
 ## Editing Files in Your Project
 
+### Editing Text
 >Your text files will be in the "content" folder, your assets like images and documents will be in the "public" folder, and your styling will be in the "css" folder. Some file extensions you will want to know are: 
 >- .html (Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser)
 >- .css (Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML)
@@ -62,48 +63,64 @@ npm install
 
 ### Editing Styles
 
-14. Navigate in the Explorer to css/index.css and double-click to edit the file in the Editor
+1. Navigate in the Explorer to css/index.css and double-click to edit the file in the Editor
 
 #### Colors
 >Hexcode is a color system on a scale from 0-9,A-F that designates a color RRGGBB. You can calculate a color using this [HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp) or you can type in a [HTML color](https://www.w3schools.com/colors/colors_names.asp)
 
-15. Edit line 7 to change the background color, 9 to change the text color, 10 to change the link color, 11 to change the link hover color, and 12 to change the visited link color
-16. Edit line 87 to change the text color for h1-h3 headers, line 94 to change the text color for h4-h5 headers, and line 106 for paragraph text color
-17. Edit lines 306 and 330 to change the color of the blinking cursor in the typewriter CSS animation
-18. Edit line 365 for title class color
-19. Edit line 400 for background color of cards on about page
+2. Edit line 7 to change the background color, 9 to change the text color, 10 to change the link color, 11 to change the link hover color, and 12 to change the visited link color
+3. Edit line 87 to change the text color for h1-h3 headers, line 94 to change the text color for h4-h5 headers, and line 106 for paragraph text color
+4. Edit lines 306 and 330 to change the color of the blinking cursor in the typewriter CSS animation
+5. Edit line 365 for title class color
+6. Edit line 400 for background color of cards on about page
 
 #### Fonts
-20. Edit line 38 to change the base font for the entire site
-21. Edit line 88 to change the font for h1-h3 headers
-22. Edit line 95 to change the font for h4-h5 headers
-23. Edit line 104 to change the font for paragraph text
-24. Edit line 116 to change the font for links
-25. Edit line 119 to change the [font variant](https://www.w3schools.com/cssref/pr_font_font-variant.php) for links 
-26. Edit line 171 to change the font for preformatted code
+7. Edit line 38 to change the base font for the entire site
+8. Edit line 88 to change the font for h1-h3 headers
+9. Edit line 95 to change the font for h4-h5 headers
+10. Edit line 104 to change the font for paragraph text
+11. Edit line 116 to change the font for links
+12. Edit line 119 to change the [font variant](https://www.w3schools.com/cssref/pr_font_font-variant.php) for links 
+13. Edit line 171 to change the font for preformatted code
 
-27. To add Google Fonts, go to [https://fonts.google.com/](https://fonts.google.com/), browse/search for fonts, select as many fonts as you want, click the blue "Get font" button, click the blue "<>Get embed code" button, and in the <link> option, copy the code from "Embed code in the <head> of your html"
-28. Navigate in the Explorer to _includes/layouts/base.njk
-29. Paste your <links> on lines 10-12
+14. To add Google Fonts, go to [https://fonts.google.com/](https://fonts.google.com/), browse/search for fonts, select as many fonts as you want, click the blue "Get font" button, click the blue "<>Get embed code" button, and in the <link> option, copy the code from "Embed code in the <head> of your html"
+15. Navigate in the Explorer to _includes/layouts/base.njk
+16. Paste your <links> on lines 10-12
 
-## Run Eleventy to Create Site
+### Editing Assets
+1. Rename the files on your local machine to CV.pdf for your CV and biophoto.jpg for your About photo
+2. You can drag-and-drop files into the public folder in Explorer, or select the public folder and secondary click and choose the Upload... option
 
-1. In the Terminal, use the node package manager command npx (Node Package eXecute) to run eleventy, which will convert your markdown and nunjucks files to html files, by copying and pasting the code below and then pressing enter/return.
+## Push Changes to GitHub and Run Eleventy to Create Site
+
+1. In the toolbar to the left of the Explorer, go to Source Code.
+2. Write a short description of the changes you plan to "commit" from this local Codespaces copy of your repository to the remote copy of the repository that is publicly available at github.com/username/repository/
+3. Click the blue "Commit" button and answer Yes to any pop-up boxes.
+4. In the Terminal, use the node package manager command npx (Node Package eXecute) to run eleventy, which will convert your markdown and nunjucks files to html files, by copying and pasting the code below and then pressing enter/return.
 ```
 npx @11ty/eleventy
 ```
-2. You should see new lines of text being generated in the Terminal. You may need to troubleshoot any errors.
-3. If you want to see a local test of your site before you put it on the web, copy and paste the following code in the Terminal
+5. You should see new lines of text being generated in the Terminal. You may need to troubleshoot any errors.
+6. If you want to see a local test of your site before you put it on the web, copy and paste the following code in the Terminal
 ```
 npx @11ty/eleventy --serve
 ```
-4. Command/Control + click on the local link to view a preview of your site in a new browser tab
+7. Command/Control + click on the local link to view a preview of your site in a new browser tab
 
 
 ## Deploy to GitHub Pages
 
-Look in `.github/workflows/gh-pages.yml.sample` for information on [Deploying to **GitHub Pages**](https://www.11ty.dev/docs/deployment/#deploy-an-eleventy-project-to-git-hub-pages).
+1. Exit Codespaces and return to the main branch of your repository at github.com/username/repository.
+2. Click on the ".github/workflows/" folder link
+3. Click on the "gh-pages.yml.sample" link
+4. Select the pencil icon in the toolbar to edit this file
+5. At the top in the breadcrumbs (a graphical element showcasing folder hierarchy), edit the title "gh-pages.yml.sample" to "gh-pages.yml" and select the green "Commit changes..." button
+6. Navigate to Actions and you will see that the gh-pages branch is being created
+7. Once the gh-pages branch is finished, navigate to Settings>Pages
+8. Change the branch from None to gh-pages and click the "Save" button
+9. Navigate back to Actions and you can see your site being built
+10. Once you have the green checkmark, navigate back to Settings>Pages and you should see a link in a message that says "Your site is live at https://username.github.io/repository/"
 
-
+ 
 ### Implementation Notes
 - The `public` folder in your input directory will be copied to the output folder (via `addPassthroughCopy` in the `eleventy.config.js` file). This means `./public/css/*` will live at `./_site/css/*` after your build completes.
