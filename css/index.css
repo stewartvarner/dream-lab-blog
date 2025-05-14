@@ -1,39 +1,19 @@
-/* Defaults */
-:root {
-	--font-family: -apple-system, system-ui, sans-serif;
-	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
-}
+
 
 /* Theme colors */
 :root {
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #C0C0C0;
-	--color-gray-90: #333;
 
-	--background-color: #fff;
 
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	--background-color: #000;
+
+	--text-color: #fff;
+	--text-color-link: #0f2;
+	--text-color-link-active: #0ff;
+	--text-color-link-visited: #0b0;
 
 	--syntax-tab-size: 2;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
-
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
-
-		--background-color: #15202b;
-	}
-}
 
 
 /* Global stylesheet */
@@ -49,9 +29,11 @@ html,
 body {
 	padding: 0;
 	margin: 0 auto;
-	font-family: var(--font-family);
+	width: 60%;
+	font-family: "Source Sans 3", sans-serif;
 	color: var(--text-color);
 	background-color: var(--background-color);
+	text-align: center;
 }
 html {
 	overflow-y: scroll;
@@ -92,15 +74,41 @@ iframe {
 	aspect-ratio: 16/9;
 }
 
+h1,
+h2,
+h3 {
+  color: #ffffff;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+}
+
+h4,
+h5 {
+  color: #ffffff;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+}
+
 p:last-child {
 	margin-bottom: 0;
 }
 p {
 	line-height: 1.5;
+	font-family: "Source Sans 3", sans-serif;
+  	font-weight: 400;
+  	color: #00ff22;
+  	font-size: 2em;
+  	font-variant: small-caps;
 }
 
 li {
 	line-height: 1.5;
+}
+
+a{
+	font-family: "Silkscreen", sans-serif;
+  	color: #00ff22;
+  	text-decoration: none;
 }
 
 a[href] {
@@ -123,7 +131,7 @@ main :first-child {
 }
 
 header {
-	border-bottom: 1px dashed var(--color-gray-20);
+	border-bottom: 1px dashed #aaa;
 }
 
 .links-nextprev {
@@ -131,7 +139,7 @@ header {
 	justify-content: space-between;
 	gap: .5em 1em;
 	list-style: "";
-	border-top: 1px dashed var(--color-gray-20);
+	border-top: 1px dashed #aaa;
 	padding: 1em 0;
 }
 .links-nextprev > * {
@@ -151,7 +159,8 @@ table th {
 
 pre,
 code {
-	font-family: var(--font-family-monospace);
+	font-family: "Space Mono", monospace;
+	font-weight: 400;
 }
 pre:not([class*="language-"]) {
 	margin: .5em 0;
@@ -234,7 +243,7 @@ header {
 .postlist-date,
 .postlist-item:before {
 	font-size: 0.8125em; /* 13px /16 */
-	color: var(--color-gray-90);
+	color: #444;
 }
 .postlist-date {
 	word-spacing: -0.5px;
@@ -278,3 +287,124 @@ header {
 	margin-right: 1em;
 }
 
+
+
+/*https://css-tricks.com/snippets/css/typewriter-effect/ */
+
+.typewriter h2 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #00ff22; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.2em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #00ff22;
+  }
+}
+
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background-color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: black;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #222;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
