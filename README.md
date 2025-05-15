@@ -9,7 +9,7 @@ I recommend using Google Chrome for this exercise so you can easily use the Deve
 ## Getting Started
 
 1. [Create a GitHub account](https://github.com/signup) if you do not already have one. (NOTE: You will want to pick a professional username because it will be in all of your URLs)
-2. Navigate back to [this repository](https://github.com/Makeademic/dream-lab-blog/) and click the green button that says "Use this template" and then "Create a new repository"
+2. Navigate back to [this repository](https://github.com/Makeademic/dream-lab-blog/) and click the green 🟩 "Use this template" button and then "Create a new repository"
 3. Type a name for your new repository (NOTE: lowercase and no spaces is best for URLs with hyphens or underscores separating each word)
 4. Select "Public" repository visibility and you only need to include the "main" branch (We will build the gh-pages branch in a later step)
 5. Click "Create repository from template"
@@ -21,7 +21,7 @@ So far, what we have done is created a copy of a public project on our individua
 
 >Typically coders using GitHub use their favorite text editor like [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom-editor.cc/), or [Visual Studio Code](https://code.visualstudio.com/), and then use a graphical user interface (GUI) like [GitHub Desktop](https://github.com/apps/desktop) or their command-line interface (CLI) like **Terminal** to push and pull changes to their project. GitHub created Codespaces to allow you to do both of those things right in the browser without having to download software applications (so you can do all of this on your iPad if you want!)
 
-1. On your repository's homepage, click the green "Code" button and switch from the "Local" to the "Codespaces" tab. Then click the green "Create codespace on main" button.
+1. On your repository's homepage, click the green 🟩 "Code" button and switch from the "Local" to the "Codespaces" tab. Then click the green 🟩 "Create codespace on main" button.
 2. This will open up a new tab in your browser and will take some time, so be patient with it. [NOTE: As of authoring this document, GitHub provides 60 free hours of Codespaces every month]
 3. You should see the **Explorer** on the left (this helps you see folder hierarchy), the **Editor** on the right (this is where you can edit the code), and the **Terminal** at the bottom (this is where we will provide instructions for building our project). The far left toolbar will let you switch between options: **Explorer**, Search, Source Control, Run and Debug, Extensions, and GitHub.
 4. In the **Explorer**, navigate to `_data/metadata.js` and double-click to open the file in the **Editor** space. Change the title, URL (https://username.github.io/repositoryname), description, and author data.
@@ -83,7 +83,7 @@ npm install
 12. Edit line 119 to change the [font variant](https://www.w3schools.com/cssref/pr_font_font-variant.php) for links 
 13. Edit line 171 to change the font for preformatted code
 
-14. To add Google Fonts, go to [https://fonts.google.com/](https://fonts.google.com/), browse/search for fonts, select as many fonts as you want, click the blue "Get font" button, click the blue "<>Get embed code" button, and in the <link> option, copy the code from "Embed code in the <head> of your html"
+14. To add Google Fonts, go to [https://fonts.google.com/](https://fonts.google.com/), browse/search for fonts, select as many fonts as you want, click the blue 🟦 "Get font" button, click the blue 🟦 "<>Get embed code" button, and in the <link> option, copy the code from "Embed code in the <head> of your html"
 15. Navigate in the **Explorer** to `_includes/layouts/base.njk`
 16. Paste your <links> on lines 10-12
 
@@ -95,7 +95,7 @@ npm install
 
 1. In the toolbar to the left of the **Explorer**, go to Source Code.
 2. Write a short description of the changes you plan to "commit" from this local Codespaces copy of your repository to the remote copy of the repository that is publicly available at github.com/username/repository/
-3. Click the blue "Commit" button and answer Yes to any pop-up boxes.
+3. Click the blue 🟦 "Commit" button and answer Yes to any pop-up boxes.
 4. In the **Terminal**, use the node package manager command npx (Node Package eXecute) to run eleventy, which will convert your markdown and nunjucks files to html files, by copying and pasting the code below and then pressing enter/return.
 ```
 npx @11ty/eleventy
@@ -114,12 +114,12 @@ npx @11ty/eleventy --serve
 2. Click on the ".github/workflows/" folder link
 3. Click on the "gh-pages.yml.sample" link
 4. Select the pencil icon in the toolbar to edit this file
-5. At the top in the breadcrumbs (a graphical element showcasing folder hierarchy), edit the title "gh-pages.yml.sample" to "gh-pages.yml" and select the green "Commit changes..." button
+5. At the top in the breadcrumbs (a graphical element showcasing folder hierarchy), edit the title "gh-pages.yml.sample" to "gh-pages.yml" and select the green 🟩 "Commit changes..." button
 6. Navigate to Actions and you will see that the gh-pages branch is being created
 7. Once the gh-pages branch is finished, navigate to Settings>Pages
 8. Change the branch from None to gh-pages and click the "Save" button
 9. Navigate back to Actions and you can see your site being built
-10. Once you have the green checkmark, navigate back to Settings>Pages and you should see a link in a message that says "Your site is live at https://username.github.io/repository/"
+10. Once you have the green ✅ checkmark, navigate back to Settings>Pages and you should see a link in a message that says "Your site is live at https://username.github.io/repository/"
 
  
 ### Implementation Notes
