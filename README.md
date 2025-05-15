@@ -44,26 +44,26 @@ npm install
 >- .jpg (jpg or jpeg, short for Joint Photographic Experts Group, is a compressed image format used for photos)
 >- .ico (short for icon, this file format is for square icons like the favicon in your browser tab, can be based on a transparent .png (Portable Network Graphics))
 
-1. Navigate in the **Explorer** to content/index.njk and double-click to edit the file in the **Editor**
+1. Navigate in the **Explorer** to `content/index.njk` and double-click to edit the file in the **Editor**
 2. Edit line 16 between the opening and closing `<h1>` tags (primary header) to your preferred heading
 3. Edit line 32 between the opening and closing `<h2>` tags (secondary header) to your preferred typewriter message
 4. You can delete the SVG on lines 17-28 and paste in your own SVG code, or if you have an image file, you can replace it with `<img src="image.jpg" alt="text description of image" width="300px">`
 
-5. Navigate in the **Explorer** to content/about.md and double-click to edit the file in the **Editor**
+5. Navigate in the **Explorer** to `content/about.md` and double-click to edit the file in the **Editor**
 6. Edit lines 7 and 8 between the opening and closing `<p>` tags (paragraph) to your preferred text description
 7. Edit lines 16, 17, and 18; 26, 27, and 28; and 36, 37, and 38 with your top 3 research interests and descriptions
 8. You can delete line 6 if you do not want to include an image.
 
-9. Navigate in the **Explorer** to content/blog.njk and double-click to edit the file in the **Editor**
+9. Navigate in the **Explorer** to `content/blog.njk` and double-click to edit the file in the **Editor**
 10. Edit line 12 between the opening and closing `<h2>` tags (secondary header) to your preferred blog title
 
-11. Navigate in the **Explorer** to content/blog/firstpost.md and double-click to edit the file in the **Editor**
+11. Navigate in the **Explorer** to `content/blog/firstpost.md` and double-click to edit the file in the **Editor**
 12. On line 2 you can edit the title, line 3 edit the description, line 4 edit the date, and line 5 create any tags
 13. On lines 7 and below, delete and replace with your own text
 
 ### Editing Styles
 
-1. Navigate in the **Explorer** to css/index.css and double-click to edit the file in the **Editor**
+1. Navigate in the **Explorer** to `css/index.css` and double-click to edit the file in the **Editor**
 
 #### Colors
 >Hexcode is a color system on a scale from 0-9,A-F that designates a color RRGGBB. You can calculate a color using this [HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp) or you can type in a [HTML color](https://www.w3schools.com/colors/colors_names.asp)
@@ -84,7 +84,7 @@ npm install
 13. Edit line 171 to change the font for preformatted code
 
 14. To add Google Fonts, go to [https://fonts.google.com/](https://fonts.google.com/), browse/search for fonts, select as many fonts as you want, click the blue "Get font" button, click the blue "<>Get embed code" button, and in the <link> option, copy the code from "Embed code in the <head> of your html"
-15. Navigate in the **Explorer** to _includes/layouts/base.njk
+15. Navigate in the **Explorer** to `_includes/layouts/base.njk`
 16. Paste your <links> on lines 10-12
 
 ### Editing Assets
