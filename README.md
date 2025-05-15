@@ -12,18 +12,18 @@ I recommend using Google Chrome for this exercise so you can easily use the Deve
 2. Navigate back to [this repository](https://github.com/Makeademic/dream-lab-blog/) and click the green 🟩 "Use this template" button and then "Create a new repository"
 3. Type a name for your new repository (NOTE: lowercase and no spaces is best for URLs with hyphens or underscores separating each word)
 4. Select "Public" repository visibility and you only need to include the "main" branch (We will build the gh-pages branch in a later step)
-5. Click "Create repository from template"
+5. Click the green 🟩 "Create repository from template" button
 
 **Review**
 So far, what we have done is created a copy of a public project on our individual accounts so that we can edit and make changes to the files
 
 ## Setting Up Your Project in GitHub Codespaces
 
->Typically coders using GitHub use their favorite text editor like [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom-editor.cc/), or [Visual Studio Code](https://code.visualstudio.com/), and then use a graphical user interface (GUI) like [GitHub Desktop](https://github.com/apps/desktop) or their command-line interface (CLI) like **Terminal** to push and pull changes to their project. GitHub created Codespaces to allow you to do both of those things right in the browser without having to download software applications (so you can do all of this on your iPad if you want!)
+>Typically coders using GitHub use their favorite text editor like [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom-editor.cc/), or [Visual Studio Code](https://code.visualstudio.com/), and then use a graphical user interface (GUI) like [GitHub Desktop](https://github.com/apps/desktop) or their command-line interface (CLI) like **Terminal** to push and pull changes to their project. GitHub created Codespaces to allow you to do both of those things right in the browser without having to download software applications (so you can do all of this on your iPad if you want!)  
 
 1. On your repository's homepage, click the green 🟩 "Code" button and switch from the "Local" to the "Codespaces" tab. Then click the green 🟩 "Create codespace on main" button.
 2. This will open up a new tab in your browser and will take some time, so be patient with it. [NOTE: As of authoring this document, GitHub provides 60 free hours of Codespaces every month]
-3. You should see the **Explorer** on the left (this helps you see folder hierarchy), the **Editor** on the right (this is where you can edit the code), and the **Terminal** at the bottom (this is where we will provide instructions for building our project). The far left toolbar will let you switch between options: **Explorer**, Search, Source Control, Run and Debug, Extensions, and GitHub.
+3. You should see the **Explorer** on the left (this helps you see folder hierarchy), the **Editor** on the right (this is where you can edit the code), and the **Terminal** at the bottom (this is where we will provide instructions for building our project). The far left toolbar will let you switch between options: **Explorer**, **Search**, **Source Control**, **Run and Debug**, **Extensions**, and **GitHub**.
 4. In the **Explorer**, navigate to `_data/metadata.js` and double-click to open the file in the **Editor** space. Change the title, URL (https://username.github.io/repositoryname), description, and author data.
 5. In the **Terminal**, install dependencies (the needed files for this version of the project) by copying and pasting the code below and then pressing enter/return.
 ```
@@ -42,24 +42,24 @@ npm install
 >- .njk (Nunjucks is a templating language for JavaScript)
 >- .svg (Scalable Vector Graphics (SVG) is an XML-based vector graphics format for defining two-dimensional graphics, having support for interactivity and animation)
 >- .jpg (jpg or jpeg, short for Joint Photographic Experts Group, is a compressed image format used for photos)
->- .ico (short for icon, this file format is for square icons like the favicon in your browser tab, can be based on a transparent .png (Portable Network Graphics))
+>- .ico (short for icon, this file format is for square icons like the favicon in your browser tab, can be based on a transparent .png (Portable Network Graphics))  
 
 1. Navigate in the **Explorer** to `content/index.njk` and double-click to edit the file in the **Editor**
 2. Edit line 16 between the opening and closing `<h1>` tags (primary header) to your preferred heading
 3. Edit line 32 between the opening and closing `<h2>` tags (secondary header) to your preferred typewriter message
-4. You can delete the SVG on lines 17-28 and paste in your own SVG code, or if you have an image file, you can replace it with `<img src="image.jpg" alt="text description of image" width="300px">`
+4. You can delete the SVG on lines 17-28 and paste in your own SVG code, or if you have an image file, you can replace it with `<img src="image.jpg" alt="text description of image" width="300px">`  
 
 5. Navigate in the **Explorer** to `content/about.md` and double-click to edit the file in the **Editor**
 6. Edit lines 7 and 8 between the opening and closing `<p>` tags (paragraph) to your preferred text description
 7. Edit lines 16, 17, and 18; 26, 27, and 28; and 36, 37, and 38 with your top 3 research interests and descriptions
-8. You can delete line 6 if you do not want to include an image.
+8. You can delete line 6 if you do not want to include an image  
 
 9. Navigate in the **Explorer** to `content/blog.njk` and double-click to edit the file in the **Editor**
-10. Edit line 12 between the opening and closing `<h2>` tags (secondary header) to your preferred blog title
+10. Edit line 12 between the opening and closing `<h2>` tags (secondary header) to your preferred blog title  
 
 11. Navigate in the **Explorer** to `content/blog/firstpost.md` and double-click to edit the file in the **Editor**
 12. On line 2 you can edit the title, line 3 edit the description, line 4 edit the date, and line 5 create any tags
-13. On lines 7 and below, delete and replace with your own text
+13. On lines 7 and below, delete and replace with your own text  
 
 ### Editing Styles
 
@@ -72,7 +72,7 @@ npm install
 3. Edit line 87 to change the text color for h1-h3 headers, line 94 to change the text color for h4-h5 headers, and line 106 for paragraph text color
 4. Edit lines 306 and 330 to change the color of the blinking cursor in the typewriter CSS animation
 5. Edit line 365 for title class color
-6. Edit line 400 for background color of cards on about page
+6. Edit line 400 for background color of cards on about page  
 
 #### Fonts
 7. Edit line 38 to change the base font for the entire site
@@ -81,11 +81,11 @@ npm install
 10. Edit line 104 to change the font for paragraph text
 11. Edit line 116 to change the font for links
 12. Edit line 119 to change the [font variant](https://www.w3schools.com/cssref/pr_font_font-variant.php) for links 
-13. Edit line 171 to change the font for preformatted code
+13. Edit line 171 to change the font for preformatted code  
 
 14. To add Google Fonts, go to [https://fonts.google.com/](https://fonts.google.com/), browse/search for fonts, select as many fonts as you want, click the blue 🟦 "Get font" button, click the blue 🟦 "<>Get embed code" button, and in the <link> option, copy the code from "Embed code in the <head> of your html"
 15. Navigate in the **Explorer** to `_includes/layouts/base.njk`
-16. Paste your <links> on lines 10-12
+16. Paste your <links> on lines 10-12  
 
 ### Editing Assets
 1. Rename the files on your local machine to CV.pdf for your CV and biophoto.jpg for your About photo
