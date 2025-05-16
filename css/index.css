@@ -7,9 +7,9 @@
 	--background-color: #000;
 
 	--text-color: #fff;
-	--text-color-link: #0f2;
+	--text-color-link: #33ccff;
 	--text-color-link-active: #0ff;
-	--text-color-link-visited: #0b0;
+	--text-color-link-visited: #006080;
 
 	--syntax-tab-size: 2;
 }
@@ -103,7 +103,7 @@ p {
 	line-height: 1.5;
 	font-family: "Source Sans 3", sans-serif;
   	font-weight: 400;
-  	color: #00ff22;
+  	color: #33ccff;
   	font-size: 1.2em;
   	
 }
@@ -114,7 +114,7 @@ li {
 
 a{
 	font-family: "Silkscreen", sans-serif;
-  	color: #00ff22;
+  	color: #33ccff;
   	text-decoration: none;
 	font-variant: small-caps;
 	font-size: 1.2em;
@@ -303,7 +303,7 @@ header {
 
 .typewriter h2 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid #00ff22; /* The typwriter cursor */
+  border-right: 0.15em solid #33ccff; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.2em; /* Adjust as needed */
@@ -327,7 +327,7 @@ header {
     border-color: transparent;
   }
   50% {
-    border-color: #00ff22;
+    border-color: #33ccff;
   }
 }
 
