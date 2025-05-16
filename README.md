@@ -1,5 +1,7 @@
 # Dream Lab Blog Template
 
+##  https://bit.ly/DreamLabBlog
+
 This repository (aka. a repo; a central storage for your project's files, folders, and version history) has all the files and instructions to build a basic personal website with an about me page, a link to a CV [PDF], and a simple blog with the [Eleventy](https://www.11ty.dev/) site generator (using the [v3.0 release](https://github.com/11ty/eleventy/releases/tag/v3.0.0)).
 
 This project will teach you how to use multiple functions with GitHub to create a website, including [GitHub Pages](https://pages.github.com/) which hosts your static site for free and [GitHub Codespaces](https://github.com/features/codespaces) which combines a file **Explorer**, code **Editor**, and **Terminal** to allow you to make updates to "push" and "pull" from your repository (from your local copy to the remote version). 
